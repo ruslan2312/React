@@ -1,11 +1,12 @@
 .nav {
     grid-area: n;
-    background-color: yellow;
+    background-color: rgb(34, 43, 70);
 }
-.item{
-    color: firebrick;
+.item a{
+    color: rgb(236, 219, 219);
+    text-decoration: none;
 }
 
-.item.active{
-    color: orange;
+.item a.active{
+    color: goldenrod;
 }

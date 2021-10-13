@@ -7,9 +7,9 @@ import MyPosts from "./MyPosts/MyPosts";
 const Profile = () =>
 {
     return(
-        <div className={style.content} >
+        <div  >
         <div>
-          <img src="https://w-dog.ru/wallpapers/12/6/471657930780807/makro-galka-kamni-kamen-kameshki.jpg"></img>
+          <img src="https://sun9-73.userapi.com/impg/dcq7hT3DtpGk27qJ1dXLBl7K6f3Zk7alPjbPfQ/6VazdyztIq4.jpg?size=508x956&quality=96&sign=858b7c6548347c4d44e47e6e19492c47&type=album"></img>
         </div>
         <MyPosts></MyPosts>
       </div>

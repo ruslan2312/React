@@ -1,7 +1,12 @@
 .content {
     grid-area: c;
-    background-color: wheat;
+    background-color: rgb(32, 24, 9);
 }
 .item{
-    color:firebrick;
+    color:rgb(165, 87, 87);
+    margin-bottom: 4px;
+}
+
+.item img {
+    width: 50px;
 }

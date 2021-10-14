@@ -1,0 +1,22 @@
+.img {
+    width: 80px;
+    height: 80px;
+    border-radius: 72px;
+    margin-top: 20px;
+    padding: 10px;
+    
+   
+}
+
+span {
+    color: white;
+    font-size: 30px;
+    
+}
+
+.text {
+    color: yellowgreen;
+   
+}
+
+

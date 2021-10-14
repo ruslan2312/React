@@ -9,17 +9,19 @@ import Dialog from './Components/Dilogs/Dialogs';
 import News from './Components/News/News';
 import Settings from './Components/Settings/Settings';
 
-function App() {
+
+
+function App(props) {
   return (
     <div className='app-wrapper'>
       <Header> </Header>
-      <Navbar> </Navbar>
-      
+      <Navbar state={props.appState.DialogsPage}> </Navbar>
+
       <div className="app-wrapper-content">
-        <Route path="/news" component={News}/>
-        <Route path="/messages" component={Dialog}/>
-        <Route path="/profile" component={Profile}/>
-        <Route path="/settings" component={Settings}/>
+        <Route exact path="/news" render={() => <News></News>} />
+        <Route exact path="/messages" render={() => <Dialog state={props.appState.DialogsPage}> </Dialog>} />
+        <Route exact path="/profile" render={() => <Profile state={props.appState.PostPage}></Profile>} />
+        <Route exact path="/settings" render={() => <Settings></Settings>} />
       </div>
     </div>
   );

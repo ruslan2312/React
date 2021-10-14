@@ -1,0 +1,17 @@
+.img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.text {
+    font-size:35px;
+    
+}
+
+li {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    margin-left: 1000px;
+}

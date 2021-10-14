@@ -1,18 +1,21 @@
-import react from "react";
+import React from "react";
 import style from "./MyPosts.module.css";
 import Post from "./Post/Posts";
 
 
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+
+  let mapPostData = props.state.postData.map(element => <Post id={element.id} message={element.message} like={element.like} img={element.img} > </Post>);
+
   return (
     <div>my post
       <div>
         <textarea></textarea>
         <button> Добавить пост</button>
-      </div>
+      </div> 
       <div> New Post</div>
-      <Post message = "Hi message 1" like = "3"/>
-      <Post message = "Hi message How you 2" like = "5"/>
+      {mapPostData}
     </div>
   )
 }

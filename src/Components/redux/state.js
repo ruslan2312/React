@@ -1,3 +1,8 @@
+import { renderThree } from "../../render";
+
+
+
+
 let state = {
     DialogsPage: {
         dialogsDatat: [
@@ -14,9 +19,22 @@ let state = {
     PostPage: {
         postData: [
             { id: 1, message: "Hi message 1", like: "3" },
-            { id: 2, message: "Hi message 2", like: "5" }
+            { id: 2, message: "Hi message 2", like: "2" }
         ]
     },
 }
+
+
+export let addPostState = (post) => {
+    debugger;
+    let newPost = {
+        id: 1,
+        message: post,
+        like: 0
+    }
+    state.PostPage.postData.push(newPost);
+    renderThree(state);
+}
+
 
 export default state;

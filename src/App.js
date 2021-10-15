@@ -12,15 +12,17 @@ import Settings from './Components/Settings/Settings';
 
 
 function App(props) {
-  return (
+
+  
+   return (
     <div className='app-wrapper'>
       <Header> </Header>
-      <Navbar state={props.appState.DialogsPage}> </Navbar>
+      <Navbar state={props.state.DialogsPage}> </Navbar>
 
       <div className="app-wrapper-content">
         <Route exact path="/news" render={() => <News></News>} />
-        <Route exact path="/messages" render={() => <Dialog state={props.appState.DialogsPage}> </Dialog>} />
-        <Route exact path="/profile" render={() => <Profile state={props.appState.PostPage}></Profile>} />
+        <Route exact path="/messages" render={() => <Dialog state={props.state.DialogsPage}> </Dialog>} />
+        <Route exact path="/profile" render={() => <Profile state={props.state.PostPage} addPostState={props.addPostState}></Profile>} />
         <Route exact path="/settings" render={() => <Settings></Settings>} />
       </div>
     </div>

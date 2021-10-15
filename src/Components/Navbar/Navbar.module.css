@@ -9,8 +9,6 @@
     text-decoration: none;
     font-size: 30px;
     margin-top:20px;
-    
-  
 }
 
 .freinds {
@@ -19,8 +17,6 @@
     margin-top:140px;
     margin-left: 100px;
 }
-
-
 
 .item a.active{
     color: goldenrod;

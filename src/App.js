@@ -18,11 +18,10 @@ function App(props) {
     <div className='app-wrapper'>
       <Header> </Header>
       <Navbar state={props.state.DialogsPage}> </Navbar>
-
       <div className="app-wrapper-content">
         <Route exact path="/news" render={() => <News></News>} />
         <Route exact path="/messages" render={() => <Dialog state={props.state.DialogsPage}> </Dialog>} />
-        <Route exact path="/profile" render={() => <Profile state={props.state.PostPage} addPostState={props.addPostState}></Profile>} />
+        <Route exact path="/profile" render={() => <Profile state={props.state.PostPage} dispatch={props.dispatch}></Profile>} />
         <Route exact path="/settings" render={() => <Settings></Settings>} />
       </div>
     </div>

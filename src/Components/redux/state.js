@@ -1,3 +1,6 @@
+const ADD_POST_STATE = 'ADD-POST-STATE';
+const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
+
 let store = {
     _state: {
 
@@ -34,11 +37,11 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'UPDATE-NEW-POST') {
+        if (action.type === UPDATE_NEW_POST) {
             this._state.PostPage.postUnMessage = action.newText;
             this.renderThree(this._state);
-        }   
-        else if (action.type === 'ADD-POST-STATE') {
+        }
+        else if (action.type === ADD_POST_STATE) {
             let newPost = {
                 id: 1,
                 message: this._state.PostPage.postUnMessage,
@@ -49,7 +52,18 @@ let store = {
             this.renderThree(this._state);
         }
     }
+}
 
+export const addPostAtionCreator = () => {
+    return {
+        type: ADD_POST_STATE
+    }
+}
+
+export const updateNewPostActionCreatro = (text) => {
+    return {
+        type: UPDATE_NEW_POST, newText: text
+    }
 }
 
 

@@ -6,6 +6,7 @@ import ProfileInfo from "./PorfileInfo/ProfileInfo";
 
 
 const Profile = (props) => {
+  debugger
   return (
     <div>
       <ProfileInfo />

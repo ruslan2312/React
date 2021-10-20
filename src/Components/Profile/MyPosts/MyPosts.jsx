@@ -7,7 +7,7 @@ import {addPostAtionCreator, updateNewPostActionCreatro} from "../../redux/profi
 
 
 const MyPosts = (props) => {
-
+debugger
   let mapPostData = props.state.postData.map(element => <Post id={element.id} message={element.message} like={element.like} img={element.img} > </Post>);
 
   let NewPost = React.createRef();

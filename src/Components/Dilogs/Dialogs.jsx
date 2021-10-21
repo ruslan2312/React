@@ -7,7 +7,7 @@ import { sendMessageActionCreatror, updateNewMessageActionCreatror } from '../re
 
 
 
-const Dialog = (props) => {
+const Dialogs = (props) => {
 
     let dialogMap = props.state.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img}> </DialogItem>)
     let messageMap = props.state.messageData.map(element => <Message id={element.id} message={element.message} ></Message >)
@@ -16,12 +16,12 @@ const Dialog = (props) => {
 
 
     const sendMessage = () => {
-        props.dispatch(sendMessageActionCreatror())
+        props.sendMessage();
     }
 
     const onChageMessage = () => {
         let message = NewM.current.value;
-        props.dispatch(updateNewMessageActionCreatror(message));
+        props.changeMessage(message);
     }
 
 
@@ -29,16 +29,16 @@ const Dialog = (props) => {
         <div className={style.dialogs}>
             <div className={style.dialogsItems}>
                 {dialogMap}
-            </div> 
+            </div>
 
 
             <div className={style.messages}>
                 {messageMap} <div><textarea onChange={onChageMessage} ref={NewM} value={props.state.messageUnMessage}>  </textarea>
-                <button onClick={sendMessage}> sadasd</button> </div>
+                    <button onClick={sendMessage}> sadasd</button> </div>
             </div>
 
         </div>
     )
 }
 
-export default Dialog;
+export default Dialogs;

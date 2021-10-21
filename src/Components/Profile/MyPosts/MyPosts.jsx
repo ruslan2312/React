@@ -1,24 +1,18 @@
 import React from "react";
-import style from "./MyPosts.module.css";
 import Post from "./Post/Posts";
-import {addPostAtionCreator, updateNewPostActionCreatro} from "../../redux/profile-reducer"
-
-
-
 
 const MyPosts = (props) => {
-debugger
   let mapPostData = props.state.postData.map(element => <Post id={element.id} message={element.message} like={element.like} img={element.img} > </Post>);
 
   let NewPost = React.createRef();
 
   let addPost = () => {
-    props.dispatch(addPostAtionCreator());
+   props.addPost();
   }
 
   let onChangeText = () => {
     let message = NewPost.current.value;
-    props.dispatch(updateNewPostActionCreatro(message));
+    props.updateNewPostText(message)
   }
 
   return (

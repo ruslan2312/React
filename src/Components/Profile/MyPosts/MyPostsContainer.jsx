@@ -1,23 +1,27 @@
 import React from "react";
-import {addPostAtionCreator, updateNewPostActionCreatro} from "../../redux/profile-reducer"
+import ContextComponent from "../../../Context";
+import { addPostAtionCreator, updateNewPostActionCreatro } from "../../redux/profile-reducer"
 import MyPosts from "./MyPosts";
 
 
-
 const MyPostsContainer = (props) => {
-  
-  let NewPost = React.createRef();
+  return <ContextComponent>{
+    (store) => {
 
-  let onAddPost = () => {
-    props.dispatch(addPostAtionCreator());
+      let state = store.getState();
+
+      let onAddPost = () => {
+        store.dispatch(addPostAtionCreator());
+      }
+      
+      let onChangeText = (message) => {
+        store.dispatch(updateNewPostActionCreatro(message));
+      }
+
+      return (<MyPosts updateNewPostText={onChangeText} addPost={onAddPost} state={state.PostPage}></MyPosts>)
+    }
   }
-  let onChangeText = (message) => {
-    props.dispatch(updateNewPostActionCreatro(message));
-  }
+  </ContextComponent>
 
-  return (
-    <MyPosts updateNewPostText={onChangeText} addPost={onAddPost} state={props.state}></MyPosts>
-
-  )
 }
 export default MyPostsContainer;

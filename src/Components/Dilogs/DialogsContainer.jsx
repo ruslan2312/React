@@ -4,22 +4,28 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import { sendMessageActionCreatror, updateNewMessageActionCreatror } from '../redux/dialogs-reducer'
 import Dialogs from "./Dialogs";
-
+import ContextComponent from "../../Context";
 
 const DialogsContainer = (props) => {
+    return <ContextComponent>{
+        (store) => {
 
+            let state = store.getState();
 
-    const onSendMessage = () => {
-        props.dispatch(sendMessageActionCreatror())
+            let onSendMessage = () => {
+                store.dispatch(sendMessageActionCreatror())
+            }
+
+            let onChangeMessage = (message) => {
+                store.dispatch(updateNewMessageActionCreatror(message));
+            }
+
+            return (<Dialogs sendMessage={onSendMessage} changeMessage={onChangeMessage} state={state.DialogsPage}></Dialogs>
+            )
+        }
     }
+    </ContextComponent>
 
-    const onChangeMessage = (message) => {
-        props.dispatch(updateNewMessageActionCreatror(message));
-    }
-
-
-    return ( <Dialogs sendMessage={onSendMessage} changeMessage={onChangeMessage} state={props.state}></Dialogs>
-    )
 }
 
 export default DialogsContainer;

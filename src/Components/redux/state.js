@@ -41,6 +41,7 @@ let store = {
     subscribe(observer) {
         this.renderThree = observer;
     },
+    
 
     dispatch(action) {
         this._state.PostPage = profileReducer(this._state.PostPage, action);

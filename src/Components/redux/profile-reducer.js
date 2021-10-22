@@ -10,7 +10,6 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
-    debugger
     switch (action.type) {
         case ADD_POST_STATE:
             let newPost = {
@@ -28,8 +27,9 @@ const profileReducer = (state = initialState, action) => {
 
         default:
             return state
-
+           
     }
+    
 }
 export const addPostAtionCreator = () => {
     return {

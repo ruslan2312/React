@@ -6,14 +6,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import ContextComponent, { Provider } from './Context';
 
 
 let renderThree = (state) => {
-    
+
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} dispatch={store.dispatch.bind(store)}  />
+                <Provider store={store}>
+                    <App/>
+                </Provider>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
@@ -22,7 +25,7 @@ let renderThree = (state) => {
 renderThree(store.getState());
 
 
-store.subscribe(() => { 
+store.subscribe(() => {
     let state = store.getState();
     renderThree(state);
 });

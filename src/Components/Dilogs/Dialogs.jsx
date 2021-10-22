@@ -8,7 +8,7 @@ import { sendMessageActionCreatror, updateNewMessageActionCreatror } from '../re
 
 
 const Dialogs = (props) => {
-
+debugger
     let dialogMap = props.state.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img}> </DialogItem>)
     let messageMap = props.state.messageData.map(element => <Message id={element.id} message={element.message} ></Message >)
 

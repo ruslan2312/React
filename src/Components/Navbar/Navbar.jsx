@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 import Friends from "./Friends and name/Friends";
 import Name from "./Friends and name/Name";
 const Navbar = (props) => {
-    
-    let mapImg = props.state.dialogsDatat.map(element => <Friends img={element.img} name={element.name} > </Friends>);
-    let mapName = props.state.dialogsDatat.map(element => <Name  name={element.name} > </Name>);
+    let mapImg = props.DialogsPage.dialogsDatat.map(element => <Friends img={element.img} name={element.name} > </Friends>);
+    let mapName = props.DialogsPage.dialogsDatat.map(element => <Name name={element.name} > </Name>);
 
     return (
         <div>
@@ -16,8 +15,8 @@ const Navbar = (props) => {
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/news" activeClassName={style.active}>Новости</NavLink></div>
                 <div className={style.item}><NavLink to="/settings" activeClassName={style.active}>  Настройки </NavLink></div>
                 <div className={style.freinds}> Freinds </div>
-               <div className={style.ff}> {mapImg} </div> 
-               <div className={style.ff}> {mapName} </div>
+                <div className={style.ff}> {mapImg} </div>
+                <div className={style.ff}> {mapName} </div>
             </nav>
         </div>
     )

@@ -4,19 +4,18 @@ import { NavLink } from "react-router-dom";
 import Friends from "./Friends and name/Friends";
 import Name from "./Friends and name/Name";
 import Navbar from "./Navbar";
-import ContextComponent from "../../Context";
-const NavbarContainer = (props) => {
 
-    return <ContextComponent>{
-        (store) => {
-            let state = store.getState();
-            return (
-                <Navbar state={state.DialogsPage}></Navbar>
-            )
-        }
+import { connect } from "react-redux";
+
+
+  
+let mapStateToProps = (state) => {
+    return {
+        DialogsPage:state.DialogsPage
     }
-    </ContextComponent>
 }
+
+const NavbarContainer = connect(mapStateToProps)(Navbar);
 
 
 

@@ -8,9 +8,9 @@ import { sendMessageActionCreatror, updateNewMessageActionCreatror } from '../re
 
 
 const Dialogs = (props) => {
-debugger
-    let dialogMap = props.state.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img}> </DialogItem>)
-    let messageMap = props.state.messageData.map(element => <Message id={element.id} message={element.message} ></Message >)
+    
+    let dialogMap = props.DialogsPage.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img}> </DialogItem>)
+    let messageMap = props.DialogsPage.messageData.map(element => <Message id={element.id} message={element.message} ></Message >)
 
     let NewM = react.createRef();
 
@@ -33,7 +33,7 @@ debugger
 
 
             <div className={style.messages}>
-                {messageMap} <div><textarea onChange={onChageMessage} ref={NewM} value={props.state.messageUnMessage}>  </textarea>
+                {messageMap} <div><textarea onChange={onChageMessage} ref={NewM} value={props.DialogsPage.messageUnMessage}>  </textarea>
                     <button onClick={sendMessage}> sadasd</button> </div>
             </div>
 

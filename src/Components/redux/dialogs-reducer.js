@@ -18,17 +18,24 @@ let installState = {
 
 const dialogsReducer = (state = installState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE:
-            state.messageUnMessage = action.newMessage;
-            return state
+        case UPDATE_NEW_MESSAGE: {
+            let stateCopy = { ...state };
+            stateCopy.messageUnMessage = { ...state.messageUnMessage }
+            stateCopy.messageUnMessage = action.newMessage;
+            return stateCopy
+        }
 
-        case SEND_MESSAGE:
-            state.messageData.push({ id: '5', message: state.messageUnMessage })
-            state.messageUnMessage = "";
-            return state
-
-        default:
-            return state
+        case SEND_MESSAGE: {
+            let stateCopy = { ...state };
+            stateCopy.messageData = [...state.messageData] ;
+            stateCopy.messageData.push({ id: '5', message: state.messageUnMessage })
+            stateCopy.messageUnMessage = "";
+            return stateCopy
+        }
+        default: {
+            let stateCopy = { ...state };
+            return stateCopy
+        }
     }
 }
 

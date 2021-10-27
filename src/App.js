@@ -15,18 +15,18 @@ import NavbarContainer from './Components/Navbar/NavbarContainer';
 
 function App(props) {
 
-  return (
-    <div className='app-wrapper'>
-      <Header> </Header>
-      <NavbarContainer> </NavbarContainer>
-      <div className="app-wrapper-content">
-        <Route exact path="/news" render={() => <News></News>} />
-        <Route exact path="/messages" render={() => <DialogsContainer> </DialogsContainer>} />
-        <Route exact path="/profile" render={() => <Profile ></Profile>} />
-        <Route exact path="/settings" render={() => <Settings></Settings>} />
-      </div>
-    </div>
-  );
+    return (
+        <div className='app-wrapper'>
+            <Header> </Header>
+            <NavbarContainer> </NavbarContainer>
+            <div className="app-wrapper-content">
+                <Route exact path="/news" render={() => <News></News>} />
+                <Route exact path="/messages" render={() => <DialogsContainer> </DialogsContainer>} />
+                <Route exact path="/profile" render={() => <Profile ></Profile>} />
+                <Route exact path="/settings" render={() => <Settings></Settings>} />
+            </div>
+        </div>
+    );
 }
 
 export default App;

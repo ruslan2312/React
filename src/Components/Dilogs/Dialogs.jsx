@@ -8,9 +8,9 @@ import { sendMessageActionCreatror, updateNewMessageActionCreatror } from '../re
 
 
 const Dialogs = (props) => {
-    
-    let dialogMap = props.DialogsPage.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img}> </DialogItem>)
-    let messageMap = props.DialogsPage.messageData.map(element => <Message id={element.id} message={element.message} ></Message >)
+
+    let dialogMap = props.DialogsPage.dialogsDatat.map(element => <DialogItem id={element.id} name={element.name} img={element.img} key={element.id}> </DialogItem>)
+    let messageMap = props.DialogsPage.messageData.map(element => <Message id={element.id} message={element.message} key={element.id} ></Message >)
 
     let NewM = react.createRef();
 

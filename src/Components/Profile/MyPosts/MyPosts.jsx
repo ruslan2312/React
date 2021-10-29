@@ -3,7 +3,7 @@ import Post from "./Post/Posts";
 
 const MyPosts = (props) => {
 
-  let mapPostData = props.PostPage.postData.map(element => <Post id={element.id} message={element.message} like={element.like} img={element.img} > </Post>);
+  let mapPostData = props.PostPage.postData.map(element => <Post id={element.id} message={element.message} like={element.like} img={element.img} key={element.id} > </Post>);
 
   let NewPost = React.createRef();
 

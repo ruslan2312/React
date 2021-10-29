@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import Friends from "./Friends and name/Friends";
 import Name from "./Friends and name/Name";
 const Navbar = (props) => {
-    let mapImg = props.DialogsPage.dialogsDatat.map(element => <Friends img={element.img} name={element.name} > </Friends>);
-    let mapName = props.DialogsPage.dialogsDatat.map(element => <Name name={element.name} > </Name>);
+    let mapImg = props.DialogsPage.dialogsDatat.map(element => <Friends img={element.img} name={element.name} key={element.id} > </Friends>);
+    let mapName = props.DialogsPage.dialogsDatat.map(element => <Name name={element.name} key={element.id} > </Name>);
 
     return (
         <div>

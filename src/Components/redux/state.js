@@ -43,11 +43,7 @@ let store = {
     },
 
 
-    dispatch(action) {
-        this._state.PostPage = profileReducer(this._state.PostPage, action);
-        this._state.DialogsPage = dialogsReducer(this._state.DialogsPage, action);
-        this.renderThree(this._state);
-    }
+  
 }
 
 export default store;

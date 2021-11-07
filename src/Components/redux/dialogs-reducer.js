@@ -11,9 +11,6 @@ let installState = {
     messageData: [
         { id: 1, message: "Hi" },
         { id: 2, message: "Adely" },
-
-
-
         { id: 3, message: "How you" },
     ],
     messageUnMessage: ""

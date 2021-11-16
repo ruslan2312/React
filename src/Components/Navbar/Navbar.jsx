@@ -14,7 +14,7 @@ const Navbar = (props) => {
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/messages" activeClassName={style.active}>Сообщения</NavLink></div>
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/news" activeClassName={style.active}>Новости</NavLink></div>
                 <div className={style.item}><NavLink to="/settings" activeClassName={style.active}>  Настройки </NavLink></div>
-                <div className={`${style.item} ${style.active}`}>< NavLink to="/users" activeClassName={style.active}>Поиск пользователей</NavLink></div>
+                <div className={`${style.item} ${style.active}`}>< NavLink to="/users" activeClassName={style.active}>Пользователи</NavLink></div>
                 <div className={style.freinds}> Freinds </div>
                 <div className={style.ff}> {mapImg} </div>
                 <div className={style.ff}> {mapName} </div>

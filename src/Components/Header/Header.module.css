@@ -1,8 +1,29 @@
 .header {
-    background-color: rgb(74, 103, 117);
+    background-color: rgb(16, 171, 248);
     grid-area: h;
     margin-bottom: 15px;
 }
-.header img{
+
+.header img {
     width: 80px;
+}
+
+.item a {
+    color: rgb(16, 171, 248);
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 1000px;
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+.item a.active {
+    color: black;
+    padding-left: 10px;
 }

@@ -6,7 +6,7 @@ import MyPosts from "./MyPosts";
 
 
 let mapDispatchToProps = (dispatch) => {
-  
+
     return {
         updateNewPostText: (message) => {
             dispatch(updateNewPostActionCreatro(message));
@@ -19,7 +19,7 @@ let mapDispatchToProps = (dispatch) => {
 let mapStateToProps = (state) => {
     return {
         PostPage: state.PostPage
-}
+    }
 }
 const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
 export default MyPostsContainer;

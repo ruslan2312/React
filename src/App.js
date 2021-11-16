@@ -10,14 +10,13 @@ import News from './Components/News/News';
 import Settings from './Components/Settings/Settings';
 import DialogsContainer from './Components/Dilogs/DialogsContainer';
 import NavbarContainer from './Components/Navbar/NavbarContainer';
-import { UsersContainer } from './Components/Users/UsersContainer';
-
+import UsersContainer from './Components/Users/UsersContainer';
+import { HeaderContainer } from './Components/Header/HeaderContainer';
 
 function App(props) {
-
     return (
         <div className='app-wrapper'>
-            <Header> </Header>
+            <HeaderContainer> </HeaderContainer>
             <NavbarContainer> </NavbarContainer>
             <div className="app-wrapper-content">
                 <Route exact path="/news" render={() => <News></News>} />

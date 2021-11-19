@@ -9,7 +9,7 @@ const Navbar = (props) => {
 
     return (
         <div>
-            <nav className={style.nav}>
+            {/* <nav className={style.nav}>
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/profile" activeClassName={style.active}> Профиль </NavLink></div>
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/messages" activeClassName={style.active}>Сообщения</NavLink></div>
                 <div className={`${style.item} ${style.active}`}>< NavLink to="/news" activeClassName={style.active}>Новости</NavLink></div>
@@ -18,7 +18,7 @@ const Navbar = (props) => {
                 <div className={style.freinds}> Freinds </div>
                 <div className={style.ff}> {mapImg} </div>
                 <div className={style.ff}> {mapName} </div>
-            </nav>
+            </nav> */}
         </div>
     )
 }

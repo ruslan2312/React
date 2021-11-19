@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import style from "./Users.module.css";
+import { NavLink } from "react-router-dom";
 
 let Users = (props) => {
 
@@ -16,17 +17,18 @@ let Users = (props) => {
         pages.push(i);
     }
 
-
     return <div>
         {
             props.users.map(element =>
                 <div className={style.profile} key={element.id}>
                     <Card sx={{ maxWidth: 345, border: 2 }}>
-                        <CardMedia
-                            component="img"
-                            height="300"
-                            image={element.img}
-                        />
+                        <NavLink to={"/profile/" + element.id}>
+                            <CardMedia
+                                component="img"
+                                height="300"
+                                image={element.img}
+                            />
+                        </NavLink>
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
                                 {element.name} {element.surname}
@@ -54,10 +56,6 @@ let Users = (props) => {
             > {element}</Button>
         })
         }
-
-        {/* <Button color="inherit" variant="contained" sx={{ mt: 1, mx: 10, p: 2 }} onClick={this.getUsers}>
-                Показать больше
-            </Button> */}
     </div >
 }
 

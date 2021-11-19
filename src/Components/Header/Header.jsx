@@ -31,19 +31,24 @@ const Header = (props) => {
                         color="inherit"
                         aria-label="menu"
                         sx={{ mr: 2 }}
+                        onClick={() => props.open(true)}
                     >
                         <MenuIcon onClick={() => props.open(true)} >
                         </MenuIcon>
-                        <Drawer open={props.drawerStatus}>
-                            <div className={style.logo}> <img className={style.logo} src="https://avatars.mds.yandex.net/i?id=bff0a2ed855bdaa1c71cc04b7dc398f1-4219759-images-thumbs&n=13" /></div>
-                            <MenuItem> <div className={`${style.item} ${style.active}`}> <PersonIcon /> < NavLink to="/profile" activeClassName={style.active}> Профиль </NavLink> </div> </MenuItem>
-                            <MenuItem> <div className={`${style.item} ${style.active}`}> <MessageIcon />< NavLink to="/messages" activeClassName={style.active}>Сообщения</NavLink></div> </MenuItem>
-                            <MenuItem> <div className={`${style.item} ${style.active}`}> <FeedIcon /> < NavLink to="/news" activeClassName={style.active}>Новости</NavLink></div> </MenuItem>
-                            <MenuItem> <div className={`${style.item} ${style.active}`}> <SettingsIcon /><NavLink to="/settings" activeClassName={style.active}>  Настройки </NavLink></div>                          </MenuItem>
-                            <MenuItem> <div className={`${style.item} ${style.active}`}> <AccessibleIcon /> < NavLink to="/users" activeClassName={style.active}>Пользователи</NavLink></div> </MenuItem>
-                            <Button variant="contained" onClick={() => props.close(false)} sx={{ m: 5 }}>На Главную</Button>
-                        </Drawer>
                     </IconButton>
+                    <Drawer open={props.drawerStatus}
+                        onBackdropClick={() => props.open(false)}
+                    >
+                        <div className={style.logo}> <img className={style.logo} src="https://pixy.org/src/94/942716.jpg" /></div>
+                        <div className={`${style.item} ${style.active}`}>  < NavLink to="/profile" activeClassName={style.active}>  <MenuItem style={{ fontSize: '20px' }}><PersonIcon /> <div style={{ marginLeft: '20px' }}>  Профиль </div>  </MenuItem></NavLink></div>
+                        <div className={`${style.item} ${style.active}`}>  < NavLink to="/messages" activeClassName={style.active}>  <MenuItem style={{ fontSize: '20px' }}><MessageIcon /> <div style={{ marginLeft: '20px' }}>  Сообщения </div>  </MenuItem></NavLink></div>
+                        <div className={`${style.item} ${style.active}`}>  < NavLink to="/news" activeClassName={style.active}>  <MenuItem style={{ fontSize: '20px' }}><FeedIcon /> <div style={{ marginLeft: '20px' }}>  Новости </div>  </MenuItem></NavLink></div>
+                        <div className={`${style.item} ${style.active}`}>  < NavLink to="/settings" activeClassName={style.active}>  <MenuItem style={{ fontSize: '20px' }}><SettingsIcon /> <div style={{ marginLeft: '20px' }}>  Настройки </div>  </MenuItem></NavLink></div>
+                        <div className={`${style.item} ${style.active}`}>  < NavLink to="/users" activeClassName={style.active}>  <MenuItem style={{ fontSize: '20px' }}><AccessibleIcon /> <div style={{ marginLeft: '20px' }}>  Пользователи </div>  </MenuItem></NavLink></div>
+                        <Button variant="contained" onClick={() => props.close(false)} sx={{ m: 5 }}>На Главную</Button>
+                       
+                    </Drawer>
+
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         ReactAppContent
                     </Typography>

@@ -7,8 +7,14 @@ router.get("/users", (req, res) => {
         .then(user => {
             res.send(user);
         });
- let users = User.collection.find().count()
+    let users = User.collection.find().count()
+})
 
+  router.get("/profile/:id", (req, res) => {
+    User.find({}).skip(Number(req.query.skip)).limit(Number(req.query.limit))
+        .then(user => {
+          res.send(user[req.params.id])
+        });
 })
 
 router.post("/users", (req, res) => {

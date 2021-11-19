@@ -5,10 +5,7 @@ import Users from "./Users";
 import Preloader from "../Preloader/Preloader"
 import * as axios from "axios";
 
-
-
 class UsersContainer extends React.Component {
-
     componentDidMount() {
         this.props.setIsFetching(true)
         axios.get(`http://localhost:27017/api/users?limit=${this.props.pageSize}&skip=${(this.props.curentPage - 1) * this.props.pageSize}`).then(response => {
@@ -58,28 +55,5 @@ let mapStateToProps = (state) => {
     }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (usersId) => {
-//             dispatch(followActionCreator(usersId))
-//         },
-//         unfollow: (usersId) => {
-//             dispatch(unfollowActionCreator(usersId))
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUsersAC(users))
-//         },
-//         setCurentPage: (pageNumber) => {
-//             dispatch(setCurentPageActionCreator(pageNumber))
-//         },
-//         setTotalPages: (totalPages) => {
-//             dispatch(setTotalPageActionCreator(totalPages))
-//         },
-//         setIsFetching: (fetching) => {
-//             dispatch(setIsFetchingActionCreator(fetching))
-//         }
-
-//     }
-// }
 
 export default connect(mapStateToProps, { follow, unfollow, setUsers, setCurentPage, setTotalPages, setIsFetching})(UsersContainer);

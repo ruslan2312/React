@@ -15,7 +15,9 @@ let InstallState = {
 }
 
 const usersReducer = (state = InstallState, action) => {
+    
     switch (action.type) {
+        
         case FOLLOW_ACTION_CREATOR: {
             return {
                 ...state,

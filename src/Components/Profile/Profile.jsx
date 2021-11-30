@@ -9,9 +9,8 @@ const Profile = (props) => {
         return <Preloader></Preloader>
     }
     else {
-        debugger
         return (
-            <div>  <h3 >{props.profile.name} <br/>  Возраст : {props.profile.age}  </h3>
+            <div>  <h3 >{props.profile.name} <br />  Возраст : {props.profile.age}  </h3>
                 <ProfileInfo img={props.profile.img} status={props.profile.status} />
                 <MyPostsContainer img={props.profile.img} ></MyPostsContainer>
             </div>

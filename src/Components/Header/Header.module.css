@@ -12,16 +12,29 @@
     color: rgb(16, 171, 248);
     text-decoration: none;
     font-size: 20px;
-    
+
 }
 
 .logo {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 170px;
     margin-right: 30px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 
 .item a.active {
     color: black;
+}
+
+.eee {
+    color: white;
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+.eee a {
+    color: white;
+    text-decoration: none;
+    text-emphasis: none;
 }

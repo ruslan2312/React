@@ -7,7 +7,7 @@ const ProfileInfo = (props) => {
         <div>
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
                 <img className={style.img} src={props.img}></img>
-                <h1> Лучшие моменты </h1>
+                <h1>  </h1>
                 <h2 className={style.status} >  Статус: {props.status}</h2>
             </Box>
         </div>

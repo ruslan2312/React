@@ -4,12 +4,9 @@ import { openActionCreator, closeActionCreator } from "../redux/header-reducer";
 import Header from "./Header"
 
 
-
-
-
 let mapStateToProps = (state) => {
     return {
-        drawerStatus: state.HeaderPage.drawerStatus
+        drawerStatus: state.HeaderPage.drawerStatus,
     }
 }
 
